@@ -1,0 +1,88 @@
+---
+title: "Begining Machine Learning with R"
+output: R machine Learning 
+---
+
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+```{r}
+library(xgboost)
+library(tidyverse)
+```
+```{r}
+install.packages("tidyverse")
+```
+
+
+```{r}
+library("ggplot2")
+library("ggthemes")
+library("psych")
+library("relaimpo")
+```
+
+
+```{r}
+insurance = read.csv("insurance.csv")
+```
+
+
+```{r}
+head(insurance,n=5)
+```
+
+
+```{r}
+summary(insurance)
+```
+
+
+```{r}
+describeBy(insurance$charges,insurance$region)
+```
+
+
+```{r}
+describeBy(insurance$charges,insurance$sex)
+
+```
+
+
+```{r}
+ggplot(data =insurance , aes(region,charges))+geom_boxplot(fill = c(2:5))+theme_classic()+ggtitle("Boxplot of Medical")
+```
+
+
+```{r}
+pairs.panels(insurance[c("age", "children", "charges")])
+```
+
+
+```{r}
+ins_model = lm
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
